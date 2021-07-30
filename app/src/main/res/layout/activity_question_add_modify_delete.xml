@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".QuestionAddModifyDelete">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/mcq_quiz"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="5dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addrecord"
+        android:text="@string/add"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button2"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="OnClick" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewAns" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"
+        app:layout_constraintBaseline_toBaselineOf="@+id/button4"
+        app:layout_constraintEnd_toStartOf="@+id/button4"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <TextView
+        android:id="@+id/textVieCategoryid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question_id"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editquestionid"
+        app:layout_constraintEnd_toStartOf="@+id/editquestionid"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/editquestionid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/question_id"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewCat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textVieCategoryid"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/editTextViewCat"
+        android:layout_width="356dp"
+        android:layout_height="115dp"
+        android:hint="@string/question"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewOA"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/editquestionid" />
+
+    <EditText
+        android:id="@+id/editTextViewOA"
+        android:layout_width="396dp"
+        android:layout_height="44dp"
+        android:hint="@string/option_a"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewOB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView7"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewCat" />
+
+    <EditText
+        android:id="@+id/editTextViewOB"
+        android:layout_width="396dp"
+        android:layout_height="45dp"
+        android:hint="@string/option_b"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewOC"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewOA" />
+
+    <EditText
+        android:id="@+id/editTextViewOC"
+        android:layout_width="398dp"
+        android:layout_height="41dp"
+        android:hint="@string/option_c"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewOD"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewOB" />
+
+    <EditText
+        android:id="@+id/editTextViewOD"
+        android:layout_width="394dp"
+        android:layout_height="46dp"
+        android:hint="@string/option_d"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/editTextViewAns"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewOC" />
+
+    <EditText
+        android:id="@+id/editTextViewAns"
+        android:layout_width="56dp"
+        android:layout_height="39dp"
+        android:hint="@string/answer_number"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/editTextViewOD" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/question"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewCat"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewCat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/a"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewOA"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewOA"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/b"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewOB"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewOB"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/c"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewOC"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewOC"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/d"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewOD"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewOD"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/answer"
+        app:layout_constraintBaseline_toBaselineOf="@+id/editTextViewAns"
+        app:layout_constraintEnd_toStartOf="@+id/editTextViewAns"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
